@@ -41,7 +41,7 @@ int partition(int *array, int start, int end, size_t size)
   *@array: array to sort
   *@start: start index of the array
   *@end: end index of the array
-  *size: size of the array
+  *@size: size of the array
   */
 void quick_sort_mimicry(int *array, int start, int end, size_t size)
 {
