@@ -1,5 +1,4 @@
 #include "sort.h"
-#include "stdio.h"
 /**
   *partition - partitions the array
   *@array: array to partition
@@ -22,7 +21,7 @@ int partition(int *array, int start, int end, size_t size)
 			array[i] = array[index];
 			array[index] = temp;
 			index = index + 1;
-			if (index < i)
+			if (index != i)
 				print_array(array, size);
 		}
 	}
