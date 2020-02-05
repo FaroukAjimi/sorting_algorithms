@@ -17,18 +17,23 @@ int partition(int *array, int start, int end, size_t size)
 	{
 		if (array[i] < pivot)
 		{
-			temp = array[i];
-			array[i] = array[index];
-			array[index] = temp;
-			index = index + 1;
-			if (index < i)
+			if (array[index] != array[i])
+			{
+				temp = array[i];
+				array[i] = array[index];
+				array[index] = temp;
 				print_array(array, size);
+			}
+			index = index + 1;
 		}
 	}
-	temp2 = array[index];
-	array[index] = array[end];
-	array[end] = temp2;
-	print_array(array, size);
+	if (array[i] != array[index])
+	{
+		temp2 = array[index];
+		array[index] = array[end];
+		array[end] = temp2;
+		print_array(array, size);
+	}
 	return (index);
 }
 /**
