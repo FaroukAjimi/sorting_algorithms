@@ -45,7 +45,7 @@ void insertion_sort_list(listint_t **list)
 		}
 	}
 	else
-		return
+		return;
 	while ((*list)->prev != NULL)
 		*list = (*list)->prev;
 }
